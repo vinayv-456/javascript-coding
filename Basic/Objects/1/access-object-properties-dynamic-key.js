@@ -5,8 +5,8 @@ function myFunction(obj, key) {
 }
 
 const tests = [
-  [{ continent: "Asia", country: "Japan" }, "continent", "Asia"],
-  [{ country: "Sweden", continent: "Europe" }, "country", "Sweden"],
+  [[{ continent: "Asia", country: "Japan" }, "continent"], "Asia"],
+  [[{ country: "Sweden", continent: "Europe" }, "country"], "Sweden"],
 ];
 
 module.exports = {

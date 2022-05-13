@@ -6,9 +6,9 @@ function myFunction(a, b) {
 }
 
 const tests = [
-  [{ a: 1, b: 2, c: 3 }, "b", true],
-  [{ x: "a", y: "b", z: "c" }, "a", false],
-  [{ x: "a", y: "b", z: "c" }, "z", true],
+  [[{ a: 1, b: 2, c: 3 }, "b"], true],
+  [[{ x: "a", y: "b", z: "c" }, "a"], false],
+  [[{ x: "a", y: "b", z: "c" }, "z"], true],
 ];
 
 module.exports = {

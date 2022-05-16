@@ -5,7 +5,12 @@
 // Return the resulting object
 // It should have the properties 'a', 'b', 'c', 'd', and 'e'
 function myFunction(x, y) {
-  return;
+  let xny = {
+    ...y,
+    ...x,
+  };
+  console.log("ff" + xny);
+  return xny;
 }
 const tests = [
   [
@@ -23,3 +28,5 @@ const tests = [
     { a: 5, b: 4, c: 3, e: 2, d: 1 },
   ],
 ];
+
+module.exports = { myFunction, tests };

@@ -2,7 +2,12 @@
 // Split a into its individual digits and return them in an array
 // Tipp: you might want to change the type of the number for the splitting
 function myFunction(a) {
-  return;
+  // map
+  let stringarr = a.toString();
+  let splitarr = stringarr.split("");
+  let stringarr1 = splitarr.map(Number);
+  console.log(stringarr1);
+  return stringarr1;
 }
 
 const tests = [

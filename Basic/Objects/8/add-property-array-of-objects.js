@@ -3,7 +3,9 @@
 // Return the new array of objects
 // Tipp: try not to mutate the original array
 function myFunction(arr, str) {
-  return;
+  return arr.map((obj) => {
+    return { ...obj, continent: str };
+  });
 }
 const tests = [
   [

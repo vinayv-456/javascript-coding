@@ -1,7 +1,13 @@
 // Write a function that takes an object (a) as argument
 // Return the sum of all object values
 function myFunction(a) {
-  return;
+  let result = Object.values;
+  let sum = 0;
+  for (let key in a) {
+    sum += a[key];
+  }
+  console.log(sum);
+  return sum;
 }
 
 const tests = [

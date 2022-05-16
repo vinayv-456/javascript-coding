@@ -1,7 +1,12 @@
 // Write a function that takes two arrays (a and b) as arguments
 // Create an object that has properties with keys 'a' and corresponding values 'b'
 // Return the object
-function myFunction(a, b) {}
+function myFunction(a, b) {
+  let result = {};
+  a.forEach((key, i) => (result[key] = b[i]));
+  console.log(result);
+  return result;
+}
 
 const tests = [
   [

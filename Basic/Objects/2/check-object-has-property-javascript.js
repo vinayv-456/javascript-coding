@@ -2,7 +2,7 @@
 // Return true if a has a property with key b
 // Return false otherwise
 function myFunction(a, b) {
-  return;
+  return (result = b in a);
 }
 
 const tests = [

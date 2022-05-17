@@ -3,17 +3,8 @@
 // Return the filtered array
 function myFunction(a, b) {
   // filter
-  var i = 0;
-  let a_dup = [...a];
-  while (i < a_dup.length) {
-    if (a_dup[i] === b) {
-      a_dup = a_dup.splice(i, 1);
-    } else {
-      ++i;
-    }
-  }
-  console.log(a_dup);
-  return a_dup;
+  let filterValue = a.filter((val) => val !== b);
+  return filterValue;
 }
 
 const tests = [

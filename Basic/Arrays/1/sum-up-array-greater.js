@@ -3,14 +3,14 @@
 // Return the sum
 function myFunction(a, b) {
   // use reduce
-  let sum = 0;
-  for (var i in a) {
-    if (a[i] > b) {
-      sum = sum + a[i];
+  const arr1 = a.reduce((total, val) => {
+    if (val > b) {
+      return total + val;
     }
-  }
-  console.log("sum of all array value greater than b : " + sum);
-  return sum;
+    return total;
+  }, 0);
+  console.log("sum of all array value greater than b : " + arr1);
+  return arr1;
 }
 
 const tests = [

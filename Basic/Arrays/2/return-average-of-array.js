@@ -2,14 +2,11 @@
 // It should return the average of the numbers
 function myFunction(arr) {
   //let arr = [10,100,40]
-  let sum = 0;
-  let avg = 0;
-  for (let i in arr) {
-    sum = sum + arr[i];
-  }
-  avg = sum / arr.length;
-  console.log("avg of array : " + avg);
-  return avg;
+  let totalnum = arr.reduce((total, val) => {
+    return total + val;
+  }, 0);
+  //console.log("avg of array : " + avg);
+  return totalnum / arr.length;
 }
 
 const tests = [

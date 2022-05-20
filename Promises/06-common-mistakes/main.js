@@ -1,3 +1,5 @@
+import fetch from "node-fetch";
+
 console.log("Common mistakes in using Promises");
 
 // ~~~~~~~~~~~~~~ 1. Promises and Loops ~~~~~~~~~~~~~~
@@ -21,6 +23,23 @@ const loopFetches = () => {
     });
   }
 };
+// loopFetches();
+
+const asyncFetch = (users) => {
+  console.log(users, users[0], `*** Fetching details of ${users[0]} ***`);
+  const response = fetchData(users[0]);
+  response.then((response) => {
+    response.json().then((user) => {
+      console.log(
+        `${user.name} is ${user.bio} has ${user.public_repos} public repos and ${user.followers} followers`
+      );
+      if (users.length > 1) {
+        asyncFetch(users.slice(1));
+      }
+    });
+  });
+};
+// asyncFetch(users);
 
 const loopAll = async () => {
   const responses = await Promise.all(users.map((user) => fetchData(user)));
